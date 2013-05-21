@@ -1,0 +1,64 @@
+<div>
+  <% @players.each do |player| %>
+    <p> <%= player.name %>: <%= player.games.where(:winner => player.id).count %> wins </p>
+    <% end %>
+  </div>
+
+
+
+<div id="ids">
+  <% @players.each_with_index do |player, index| %>
+    <p id="p<%= index+1 %>">
+      <span class="java_player"><%= player.name %></span>: 
+      <% if 80 + index == 80 %>
+        P
+      <% elsif 80 + index == 81 %>
+        Q
+      <% elsif 80 + index == 82 %>
+        R
+      <% elsif 80 + index == 80 %>
+        S
+      <% end %>
+    </p>
+  <% end %>
+</div>
+
+<table id="track">
+  <% @players.each_index do |index| %>
+    <tr id="player_<%= index + 1 %>">
+      <td class="active"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="finish"></td>
+    </tr>
+  <% end %>
+</table>
+
+  <div><button>Reset Game</button></div>

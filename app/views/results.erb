@@ -1,0 +1,7 @@
+<h2>Results:</h2>
+
+<h3>Winner: <a href="/player/<%= Player.find(@game.winner).id %>"><%= Player.find(@game.winner).name %></a></h3>
+
+<h4>Winning Time: <%= @game.finish %></h4>
+
+<p>Play again with same players? <a href="/newgame/<%= @game.id %>">Yes</a> / <a href="/">No</a></p>

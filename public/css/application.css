@@ -1,0 +1,54 @@
+.container {
+  width: 1000px;
+  margin: 100px auto 0;
+}
+
+.container button {
+  width: 120px;
+  margin: 20px 440px 0;
+  border: none;
+  background: red;
+  color: white;
+  padding: 8px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: center;
+}
+
+h2#game_id {
+  display: none;
+}
+
+#ids {
+  float: left;
+}
+
+#ids p {
+  width: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 20px 0 0;
+  line-height: 60px;
+}
+
+table tr td {
+  border-bottom: solid 2px gray;
+  width: 50px;
+  height: 50px;
+}
+
+table tr td.active {
+  background-image: url('../images/platypus.gif');
+  background-size: 32px 52px;
+}
+
+table tr#player_2 td.active {
+  background-image: url('../images/squirrel.png');
+  background-size: 34px 52px;
+}
+
+form#race_results {
+  display: none;
+}

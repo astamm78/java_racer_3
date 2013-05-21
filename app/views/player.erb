@@ -1,0 +1,15 @@
+<h1><%= player.name %></h1>
+
+<h2>Wins: <%= player.games.where(:winner => player.id).count %></h2>
+
+<h2>Total Games: <%= player.games.count %></h2>
+
+<h2>Winning Percentage: <%= ((player.games.where(:winner => player.id).count.to_f / player.games.count) * 100).round(2) %> %</h2>
+
+<h2>Winning Times:</h2>
+<% @total_time = 0 %>
+<% player.games.where(:winner => player.id).each do |game| %>
+<% @total_time += game.finish %>
+<h3><%= game.finish %> seconds</h3>
+<% end %>
+<h3> Average Winning Time: <%= ((@total_time) / player.games.where(:winner => player.id).count).round(2) %> </h3>
